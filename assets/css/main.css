@@ -1364,7 +1364,7 @@ blockquote.clean-quote p{ margin: 0 0 10px; }
   --space-2: clamp(14px, 1.8vw, 20px);
   --space-3: clamp(18px, 2.6vw, 28px);
   --space-4: clamp(24px, 3.6vw, 40px);
-  --space-header: clamp(6px, 0.7vw, 10px);
+  --space-header: clamp(6px, 0.7vw, 8px);
   /* container width */
   --content-max: 1120px; /* adjust if you want wider/narrower */
 }
