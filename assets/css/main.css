@@ -1411,7 +1411,7 @@ aside .card + .card{ margin-top: var(--space-2); }
 .post, .post-content{ margin: 0 !important; }
 /* ===== Site background photo ===== */
 :root{
-  --site-bg: url("assets/images/kitchen-sink-bg.png");
+  --site-bg: url("../images/kitchen-sink-bg.png");
 }
 
 /* keep content readable */
