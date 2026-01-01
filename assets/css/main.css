@@ -48,7 +48,7 @@
   --space-4: clamp(24px, 3.6vw, 40px);
 
   /* Header spacing (compact) */
-  --space-header: clamp(6px, 0.7vw, 10px);
+  --space-header: clamp(6px, 0.7vw, 12px);
 
   /* Container */
   --content-max: 1120px;
