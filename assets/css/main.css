@@ -1364,7 +1364,7 @@ blockquote.clean-quote p{ margin: 0 0 10px; }
   --space-2: clamp(14px, 1.8vw, 20px);
   --space-3: clamp(18px, 2.6vw, 28px);
   --space-4: clamp(24px, 3.6vw, 40px);
-
+  --space-header: clamp(6px, 0.7vw, 10px);
   /* container width */
   --content-max: 1120px; /* adjust if you want wider/narrower */
 }
@@ -1376,7 +1376,7 @@ blockquote.clean-quote p{ margin: 0 0 10px; }
 }
 
 /* 3) Give main sections modern vertical spacing */
-.site-header{ padding-block: var(--space-2); }
+.site-header{ padding-block: var(--space-header); }
 .site-footer{ padding-block: var(--space-3); }
 
 main#main{
