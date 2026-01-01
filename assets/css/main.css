@@ -1454,3 +1454,58 @@ body::after{
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(6px);
 }
+:root{
+  /* ✅ correct path relative to assets/css/main.css */
+  --bg-image: url("../images/kitchen-sink-bg.png");
+
+  /* Desktop tuning */
+  --bg-overlay: 0.32;         /* lower = more visible image */
+  --bg-position: 50% 50%;
+}
+
+/* Base */
+html, body{ height: 100%; }
+body{
+  min-height: 100vh;
+  position: relative;
+  background: #0b1220; /* fallback */
+}
+
+/* Background image layer */
+body::before{
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: var(--bg-position);
+  background-repeat: no-repeat;
+
+  /* Parallax is applied by JS via --parallaxY */
+  transform: translate3d(0, var(--parallaxY, 0px), 0);
+  will-change: transform;
+}
+
+/* Readability overlay */
+body::after{
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: rgba(0, 0, 0, var(--bg-overlay));
+}
+
+/* Mobile tuning */
+@media (max-width: 768px){
+  :root{
+    --bg-overlay: 0.42;     /* a bit darker for readability */
+    --bg-position: 50% 35%; /* nicer crop on phones */
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  body::before{ transform: none !important; }
+}

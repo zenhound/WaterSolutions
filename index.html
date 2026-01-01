@@ -316,5 +316,37 @@
       <div><a href="/privacy.html">Privacy Policy</a></div>
     </div>
   </footer>
+  <script>
+(() => {
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) return;
+
+  const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+  // Smaller = slower/subtler movement
+  const strength = isMobile ? 0.06 : 0.16;
+
+  let latestY = 0;
+  let ticking = false;
+
+  function update(){
+    ticking = false;
+    const offset = -(latestY * strength);
+    document.documentElement.style.setProperty('--parallaxY', offset.toFixed(2) + 'px');
+  }
+
+  function onScroll(){
+    latestY = window.scrollY || 0;
+    if (!ticking){
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+</script>
+
 </body>
 </html>
