@@ -1446,3 +1446,7 @@ body::after{
     radial-gradient(1200px 800px at 20% 10%, rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.75)),
     linear-gradient(180deg, rgba(2, 6, 23, 0.35), rgba(2, 6, 23, 0.70));
 }
+.card{
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+}
