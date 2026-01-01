@@ -1409,3 +1409,40 @@ aside .card + .card{ margin-top: var(--space-2); }
 
 /* 9) Kill legacy negative margins if any survived */
 .post, .post-content{ margin: 0 !important; }
+/* ===== Site background photo ===== */
+:root{
+  --site-bg: url("assets/images/kitchen-sink-bg.png");
+}
+
+/* keep content readable */
+body{
+  position: relative;
+  background: #0b1220; /* fallback while image loads */
+}
+
+/* background image layer */
+body::before{
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+
+  background-image: var(--site-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transform: scale(1.02); /* avoids edge gaps on some browsers */
+}
+
+/* soft dark overlay for contrast */
+body::after{
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background:
+    radial-gradient(1200px 800px at 20% 10%, rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.75)),
+    linear-gradient(180deg, rgba(2, 6, 23, 0.35), rgba(2, 6, 23, 0.70));
+}
