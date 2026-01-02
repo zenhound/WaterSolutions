@@ -81,3 +81,10 @@
   background: #fff;
 }
 .chip strong{ color: var(--primary-dark); }
+/* Prevent mobile horizontal scroll caused by glossy ::before elements */
+.btn,
+nav a,
+.gallery-item,
+.product-card{
+  overflow: hidden;
+}
