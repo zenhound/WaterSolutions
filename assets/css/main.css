@@ -538,11 +538,27 @@ nav a:hover::before,
 /* =========================
    9) Sidebar / Callout
    ========================= */
-.callout{
+.callout {
+  /* Base frosted surface */
   background:
-    radial-gradient(900px 280px at 20% 0%, rgba(206, 214, 218, 0.877), transparent 40%),
-    linear-gradient(180deg, rgba(213, 223, 224, 0.815), rgba(16,185,129,0.07));
-  border: 1px solid rgba(14,165,233,0.22);
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.72),
+      rgba(240, 248, 250, 0.72)
+    );
+
+  /* Frosted glass effect */
+  backdrop-filter: blur(10px) saturate(115%);
+  -webkit-backdrop-filter: blur(10px) saturate(115%);
+
+  /* Separation & polish */
+  border: 1px solid rgba(14, 165, 233, 0.25);
+  border-radius: 16px;
+  box-shadow:
+    0 10px 30px rgba(2, 132, 199, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+
+  color: #0f172a; /* slate-900 */
 }
 
 .callout-title{
