@@ -47,6 +47,12 @@
   padding-bottom: 22px;
 }
 
+/* create breathing room between header background and cards */
+.grid > .card,
+.grid > aside > .card{
+  margin-top: 16px;
+}
+
 /* Sidebar frosted callout (your “top card”) */
 .callout{
   background:
