@@ -45,7 +45,8 @@
 
   /* Container */
   --content-max: 1120px;
-
+  --wrap: var(--content-max);
+  
   /* Site background photo (relative to assets/css/main.css) */
   --bg-image: url("../images/kitchen-sink-bg.png");
   --bg-overlay: 0.32;
