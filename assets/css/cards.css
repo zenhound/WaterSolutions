@@ -4,12 +4,30 @@
 
 /* Base “page card” */
 .card{
+    background:
+    radial-gradient(900px 280px at 20% 0%,
+      rgba(206, 214, 218, 0.35),
+      transparent 50%
+    ),
+    linear-gradient(180deg,
+      rgba(255, 255, 255, 0.75),
+      rgba(240, 248, 250, 0.75)
+    );
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(14, 165, 233, 0.22);
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(2, 132, 199, 0.12);
+  /*
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: var(--r-lg);
   box-shadow: var(--shadow-md);
   overflow: hidden;
   backdrop-filter: blur(6px);
+  */
 }
 .card::before{
   content: "";
@@ -79,7 +97,7 @@
   border-radius: var(--r-md);
   border: 1px solid var(--line);
   background: rgba(255,255,255,0.7);
-  padding: 6px;
+  padding: 8px;
   display: block;
   width: auto;
 }
