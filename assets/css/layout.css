@@ -1,0 +1,47 @@
+/* =========================================================
+   layout.css — site layout + main grid
+   ========================================================= */
+
+/* Wrap: consistent content width + side padding */
+.wrap{
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding-inline: 18px;
+}
+
+/* Default page grid: stack on mobile */
+.grid{
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+/* Two-column layout on desktop */
+@media (min-width: 980px){
+  .grid{
+    grid-template-columns: minmax(0, 1fr) 360px; /* main + sidebar */
+  }
+
+  /* Make sure aside sits in column 2 */
+  .grid > aside{
+    grid-column: 2;
+    align-self: start;
+  }
+
+  /* Main content stays in column 1 */
+  .grid > section,
+  .grid > main,
+  .grid > .main{
+    grid-column: 1;
+    min-width: 0;
+  }
+}
+
+/* Optional: sticky sidebar (feels great for your callouts/cards) */
+@media (min-width: 980px){
+  .grid > aside{
+    position: sticky;
+    top: 92px; /* adjust if your header is taller/shorter */
+  }
+}
