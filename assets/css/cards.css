@@ -211,7 +211,18 @@
   overflow: hidden;
   padding: 18px 24px;
 }
+/* Journey intro block */
+.journey-intro{
+  margin: 12px 0 6px;
+}
 
+/* Journey list */
+.journey-list{
+  margin: 0 0 10px;
+  padding-left: 18px;
+  display: grid;
+  gap: 6px;
+}
 /* Utilities related to cards */
 aside .card + .card{ margin-top: var(--space-2); }
 @media (min-width: 1200px){
