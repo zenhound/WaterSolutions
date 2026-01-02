@@ -9,6 +9,10 @@
   padding-inline: 18px;
 }
 
+.home .wrap{
+  margin-top: 12px;
+}
+
 /* Default page grid: stack on mobile */
 .grid{
   display: grid;
