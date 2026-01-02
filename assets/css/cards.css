@@ -72,7 +72,7 @@
 .sidebar-images{
   display: flex;
   gap: 12px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
 }
 .sidebar-images img{
@@ -80,6 +80,9 @@
   border: 1px solid var(--line);
   background: rgba(255,255,255,0.7);
   padding: 6px;
+  display: block;
+  max-height: 48px;    /* optional: keeps them visually balanced */
+  width: auto;
 }
 
 /* Gallery cards */
