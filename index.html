@@ -293,45 +293,7 @@
       <div><a href="/privacy.html">Privacy Policy</a></div>
     </div>
   </footer>
-  <script>
-(() => {
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (prefersReduced) return;
+<script src="/assets/js/parallax.js" defer></script>
 
-  const isMobile = window.matchMedia('(max-width: 768px)').matches;
-
-  // Smaller = slower/subtler movement
-  const strength = isMobile ? 0.06 : 0.16;
-
-  let latestY = 0;
-  let ticking = false;
-
-  function update(){
-    ticking = false;
-    const offset = -(latestY * strength);
-    document.documentElement.style.setProperty('--parallaxY', offset.toFixed(2) + 'px');
-  }
-
-  function onScroll(){
-    latestY = window.scrollY || 0;
-    if (!ticking){
-      ticking = true;
-      requestAnimationFrame(update);
-    }
-  }
-
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-})();
-</script>
-<script>
-  (async () => {
-    const nodes = document.querySelectorAll("[data-include]");
-    await Promise.all([...nodes].map(async (el) => {
-      const res = await fetch(el.dataset.include, { cache: "no-cache" });
-      el.outerHTML = await res.text();
-    }));
-  })();
-</script>
 </body>
 </html>
