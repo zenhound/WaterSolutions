@@ -293,6 +293,15 @@
       <div><a href="/privacy.html">Privacy Policy</a></div>
     </div>
   </footer>
+    <script>
+  (async () => {
+    const nodes = document.querySelectorAll("[data-include]");
+    await Promise.all([...nodes].map(async (el) => {
+      const res = await fetch(el.dataset.include, { cache: "no-cache" });
+      el.outerHTML = await res.text();
+    }));
+  })();
+</script>
 <script src="assets/js/parallax.js" defer></script>
 
 </body>
