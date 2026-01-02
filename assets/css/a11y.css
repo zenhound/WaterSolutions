@@ -1,0 +1,30 @@
+/* =========================
+   3) Accessibility
+   ========================= */
+.skip-link{
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus{
+  left: 16px;
+  top: 16px;
+  width: auto;
+  height: auto;
+  padding: 10px 14px;
+  background: #ffffff;
+  border: 1px solid rgba(14,165,233,0.35);
+  border-radius: 999px;
+  box-shadow: var(--shadow-sm);
+  z-index: 1000;
+  text-decoration: none;
+}
+
+:focus-visible{
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 10px;
+}

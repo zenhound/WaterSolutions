@@ -1,0 +1,71 @@
+/* =========================
+   2) Reset / Base
+   ========================= */
+*,
+*::before,
+*::after{ box-sizing: border-box; }
+
+html{ font-size: 16px; }
+html, body{ height: 100%; }
+
+body{
+  margin: 0;
+  font-family: var(--font);
+  line-height: 1.6;
+  color: var(--ink);
+  min-height: 100vh;
+  position: relative;
+  background: #0b1220; /* fallback while image loads */
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a{
+  color: var(--primary-dark);
+  text-decoration: none;
+}
+a:hover{ text-decoration: underline; }
+
+p{ margin: 0 0 var(--space-2); }
+ul, ol{ margin: 0 0 var(--space-2); padding-left: 20px; }
+
+/* Background image layer */
+body::before{
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: var(--bg-position);
+  background-repeat: no-repeat;
+
+  /* Parallax is optional; JS can set --parallaxY */
+  transform: translate3d(0, var(--parallaxY, 0px), 0);
+  will-change: transform;
+}
+
+/* Readability overlay */
+body::after{
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: rgba(0, 0, 0, var(--bg-overlay));
+}
+
+/* Reduced motion: disable background parallax + animations */
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after{
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  body::before{ transform: none !important; }
+}

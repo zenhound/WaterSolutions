@@ -1,0 +1,61 @@
+/* =========================
+   1) Design Tokens
+   ========================= */
+:root{
+  /* Typography */
+  --font: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+  /* Palette */
+  --bg0: #f7fbff;
+  --bg1: #eef7ff;
+
+  --ink: #0b1b2b;
+  --muted: #4b647a;
+
+  --primary: #0ea5e9;
+  --primary-2: #06b6d4;
+  --primary-dark: #0369a1;
+
+  --accent: #10b981; /* optional “fresh/clean” */
+  --line: rgba(15, 23, 42, 0.10);
+  --focus: rgba(14, 165, 233, 0.28);
+
+  /* Surfaces */
+  --card: rgba(255,255,255,0.92); /* readable over photo */
+  --card-solid: #ffffff;
+
+  /* Shadows */
+  --shadow-sm: 0 8px 20px rgba(2, 6, 23, 0.08);
+  --shadow-md: 0 14px 35px rgba(2, 6, 23, 0.10);
+
+  /* Radius */
+  --r-lg: 18px;
+  --r-md: 14px;
+  --r-sm: 12px;
+
+  /* Fluid spacing system */
+  --gutter: clamp(16px, 3.2vw, 40px);
+  --space-1: clamp(10px, 1.2vw, 14px);
+  --space-2: clamp(14px, 1.8vw, 20px);
+  --space-3: clamp(18px, 2.6vw, 28px);
+  --space-4: clamp(24px, 3.6vw, 40px);
+
+  /* Header spacing (compact) */
+  --space-header: clamp(6px, 0.7vw, 16px);
+
+  /* Container */
+  --content-max: 1120px;
+
+  /* Site background photo (relative to assets/css/main.css) */
+  --bg-image: url("../images/kitchen-sink-bg.png");
+  --bg-overlay: 0.32;
+  --bg-position: 50% 50%;
+}
+
+/* Mobile tuning */
+@media (max-width: 768px){
+  :root{
+    --bg-overlay: 0.42;
+    --bg-position: 50% 35%;
+  }
+}

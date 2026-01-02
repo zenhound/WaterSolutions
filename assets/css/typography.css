@@ -1,0 +1,46 @@
+/* =========================
+   6) Typography
+   ========================= */
+h1{
+  font-size: clamp(26px, 2.2vw, 34px);
+  line-height: 1.15;
+  margin: 0 0 var(--space-2);
+  letter-spacing: -0.2px;
+}
+h2{
+  font-size: 18px;
+  margin: 0 0 var(--space-1);
+  letter-spacing: -0.1px;
+}
+
+.lede{
+  color: var(--muted);
+  font-size: 16px;
+  margin-bottom: var(--space-2);
+}
+
+.breadcrumbs{
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.breadcrumbs a{ color: var(--primary-dark); font-weight: 650; }
+.breadcrumbs span{ margin: 0 6px; color: rgba(2,6,23,0.35); }
+
+.section-title{
+  display: inline-block;
+  margin: var(--space-3) 0 var(--space-1);
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(6,182,212,0.10);
+  color: var(--primary-dark);
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.2px;
+}
+
+.form-note{
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}

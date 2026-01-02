@@ -1,0 +1,107 @@
+/* =========================================================
+   utilities.css — small helpers & safe overrides
+   ========================================================= */
+
+/* ---------- Spacing helpers ---------- */
+.mt-0{ margin-top: 0 !important; }
+.mt-1{ margin-top: 6px !important; }
+.mt-2{ margin-top: 12px !important; }
+.mt-3{ margin-top: 18px !important; }
+.mt-4{ margin-top: 24px !important; }
+
+.mb-0{ margin-bottom: 0 !important; }
+.mb-1{ margin-bottom: 6px !important; }
+.mb-2{ margin-bottom: 12px !important; }
+.mb-3{ margin-bottom: 18px !important; }
+.mb-4{ margin-bottom: 24px !important; }
+
+.p-0{ padding: 0 !important; }
+.p-1{ padding: 6px !important; }
+.p-2{ padding: 12px !important; }
+.p-3{ padding: 18px !important; }
+.p-4{ padding: 24px !important; }
+
+/* ---------- Text utilities ---------- */
+.text-center{ text-align: center !important; }
+.text-right{ text-align: right !important; }
+.text-left{ text-align: left !important; }
+
+.text-muted{ color: var(--muted) !important; }
+.text-ink{ color: var(--ink) !important; }
+
+.small{ font-size: 13px; }
+.tiny{ font-size: 12px; }
+
+/* ---------- Layout helpers ---------- */
+.stack{
+  display: grid;
+  gap: 12px;
+}
+
+.stack-sm{ gap: 8px; }
+.stack-lg{ gap: 18px; }
+
+.flex{
+  display: flex;
+  gap: 12px;
+}
+.flex-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-between{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wrap{
+  max-width: var(--wrap);
+  margin-inline: auto;
+}
+
+/* ---------- Card adjacency helpers ---------- */
+/* Keeps stacked cards visually separated */
+.card + .card{
+  margin-top: var(--space-2);
+}
+
+aside .card + .card{
+  margin-top: var(--space-2);
+}
+
+/* ---------- Visibility helpers ---------- */
+.hidden{ display: none !important; }
+
+@media (max-width: 768px){
+  .hide-mobile{ display: none !important; }
+}
+@media (min-width: 769px){
+  .hide-desktop{ display: none !important; }
+}
+
+/* ---------- Safe overrides / fixes ---------- */
+
+/* Prevent long words / URLs from blowing up layouts */
+.break-word{
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Remove underline without killing accessibility */
+.no-underline{
+  text-decoration: none !important;
+}
+
+/* Cursor helpers */
+.pointer{ cursor: pointer; }
+
+/* ---------- Motion safety ---------- */
+@media (prefers-reduced-motion: reduce){
+  *{
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
