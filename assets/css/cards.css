@@ -42,7 +42,9 @@
   opacity: 0.85;
 }
 .card .pad{
-  padding: clamp(16px, 2.2vw, 26px);
+  padding-top: 12px;
+  padding-inline: 24px;
+  padding-bottom: 22px;
 }
 
 /* Sidebar frosted callout (your “top card”) */
