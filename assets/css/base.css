@@ -49,7 +49,10 @@ body::before{
   transform: translate3d(0, var(--parallaxY, 0px), 0);
   will-change: transform;
 }
-
+body::before,
+body::after{
+  inset: -18vh 0;  /* extend beyond viewport top/bottom */
+}
 /* Readability overlay */
 body::after{
   content: "";
