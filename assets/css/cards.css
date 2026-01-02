@@ -81,7 +81,6 @@
   background: rgba(255,255,255,0.7);
   padding: 6px;
   display: block;
-  max-height: 48px;    /* optional: keeps them visually balanced */
   width: auto;
 }
 
