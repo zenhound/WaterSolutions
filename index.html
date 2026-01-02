@@ -296,7 +296,7 @@
             </div>
           </div>
         </section>
-
+		<div data-include="partials/water-test-callout.html"></div>
         <section class="card">
           <div class="pad">
             <h2>What's in YOUR water?</h2>
@@ -347,6 +347,14 @@
   onScroll();
 })();
 </script>
-
+<script>
+  (async () => {
+    const nodes = document.querySelectorAll("[data-include]");
+    await Promise.all([...nodes].map(async (el) => {
+      const res = await fetch(el.dataset.include, { cache: "no-cache" });
+      el.outerHTML = await res.text();
+    }));
+  })();
+</script>
 </body>
 </html>
