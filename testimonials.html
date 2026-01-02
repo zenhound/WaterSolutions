@@ -183,31 +183,8 @@
       </section>
 
       <aside>
-        <section class="card callout">
-          <div class="pad">
-            <p class="callout-title">FREE Consult &amp; Water Test</p>
-            <p class="callout-phone">845-255-3408</p>
-            <div style="display:flex; gap:10px; flex-wrap:wrap;">
-              <a class="btn btn-primary" href="/contact.html">Test my water</a>
-              <a class="btn" href="tel:+18452553408">Call now</a>
-            </div>
-            <p class="form-note" style="margin-top:10px;">
-              Tell us what you’re noticing (odor, staining, sediment) and we’ll recommend the right approach.
-            </p>
-          </div>
-        </section>
-
-        <section class="card">
-          <div class="pad">
-            <h2>What customers mention</h2>
-            <ul style="margin:10px 0 0;">
-              <li><strong>Accuracy:</strong> testing + diagnosis</li>
-              <li><strong>Integrity:</strong> honest recommendations</li>
-              <li><strong>Follow-up:</strong> performance checks</li>
-              <li><strong>Results:</strong> odor/staining/clarity improvements</li>
-            </ul>
-          </div>
-        </section>
+		    <div data-include="partials/water-test-callout.html"></div>
+		    <div data-include="partials/cert-card.html"></div>
       </aside>
     </div>
   </main>
@@ -218,5 +195,14 @@
       <div><a href="/privacy.html">Privacy Policy</a></div>
     </div>
   </footer>
+  <script>
+  (async () => {
+    const nodes = document.querySelectorAll("[data-include]");
+    await Promise.all([...nodes].map(async (el) => {
+      const res = await fetch(el.dataset.include, { cache: "no-cache" });
+      el.outerHTML = await res.text();
+    }));
+  })();
+</script>
 </body>
 </html>
