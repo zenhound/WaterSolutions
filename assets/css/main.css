@@ -6,7 +6,7 @@
 @import url("./header.css");
 @import url("./typography.css");
 @import url("./components.css");
-@import url("./cards.css");     /* ✅ your new cards file */
+@import url("./cards.css"); /* ✅ your new cards file */
 @import url("./modules.css");
 @import url("./effects.css");
 @import url("./footer.css");

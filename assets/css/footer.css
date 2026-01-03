@@ -1,16 +1,16 @@
 /* =========================
    14) Footer
    ========================= */
-.site-footer{
+.site-footer {
   margin-top: 44px;
   padding-block: var(--space-3);
-  background: rgba(255,255,255,0.72);
+  background: rgba(255, 255, 255, 0.72);
   backdrop-filter: blur(10px);
   border-top: 1px solid var(--line);
   font-size: 13px;
   color: var(--muted);
 }
-.footer-inner{
+.footer-inner {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

@@ -1,7 +1,7 @@
 /* =========================
    1) Design Tokens
    ========================= */
-:root{
+:root {
   /* Typography */
   --font: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 
@@ -17,16 +17,16 @@
   --primary-dark: #0369a1;
 
   --accent: #10b981; /* optional “fresh/clean” */
-  --line: rgba(15, 23, 42, 0.10);
+  --line: rgba(15, 23, 42, 0.1);
   --focus: rgba(14, 165, 233, 0.28);
 
   /* Surfaces */
-  --card: rgba(255,255,255,0.92); /* readable over photo */
+  --card: rgba(255, 255, 255, 0.92); /* readable over photo */
   --card-solid: #ffffff;
 
   /* Shadows */
   --shadow-sm: 0 8px 20px rgba(2, 6, 23, 0.08);
-  --shadow-md: 0 14px 35px rgba(2, 6, 23, 0.10);
+  --shadow-md: 0 14px 35px rgba(2, 6, 23, 0.1);
 
   /* Radius */
   --r-lg: 18px;
@@ -46,7 +46,7 @@
   /* Container */
   --content-max: 1120px;
   --wrap: var(--content-max);
-  
+
   /* Site background photo (relative to assets/css/main.css) */
   --bg-image: url("../images/kitchen-sink-bg.png");
   --bg-overlay: 0.32;
@@ -54,8 +54,8 @@
 }
 
 /* Mobile tuning */
-@media (max-width: 768px){
-  :root{
+@media (max-width: 768px) {
+  :root {
     --bg-overlay: 0.42;
     --bg-position: 50% 35%;
   }
